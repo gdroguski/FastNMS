@@ -14,7 +14,7 @@ Just run `main.cpp` with `nms_boxes.txt` input defined. Input with lines withe t
 ## How to use it with Python:
 
 Header for this DLL:
-```
+```cpp
 extern "C" NMSCLIPPER_API int nms(
 	const float* boxes, const int& n, const int& m,
 	float* new_boxes, int* pick,
@@ -34,7 +34,7 @@ extern "C" NMSCLIPPER_API int nmsWithCharCls(
 
 It's intended to be used in Python 3 with ctypes. Full Python example for standard NMS:
 
-```
+```python
 # Imports
 import numpy as np
 from ctypes import c_float, c_int, c_double, POINTER, byref
